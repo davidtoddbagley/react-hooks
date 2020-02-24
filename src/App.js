@@ -87,7 +87,7 @@ function App() {
 
       <hr></hr>
       <p>
-        <label>useEffect: </label>
+        <label>useEffect: managing setTimeout calls and cleanups</label>
       </p>
       <UseEffect />
 
@@ -107,8 +107,10 @@ function App() {
 
       <hr></hr>
       <p>
-        <label>useReducer: {techList.join(', ')} (parent)</label>
+        <label>useReducer: single dispatch supporting multiple use cases</label>
       </p>
+      {techList.join(', ')} (parent)
+      <p></p>
       <UseReducer
         handleChange={useReducerHandleChange}
         isCpp={useReducerCpp}
@@ -116,17 +118,6 @@ function App() {
         toggle={useReducerToggle}
         techList={techList}
         />
-      <hr></hr>
-      <p>
-        <label>useCallback: </label>
-      </p>
-      <UseCallback />
-
-      <hr></hr>
-      <p>
-        <label>useMemo: </label>
-      </p>
-      <UseMemo />
     </div>
   );
 }
