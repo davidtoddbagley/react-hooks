@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { SharedContext } from './App';
+
+import Button from 'react-bootstrap/Button';
 
 const UseContext = () => {
+  const context = useContext(SharedContext);
+
   return (
-    <div>UseContext</div>
+    <div>
+      <Button>{context.useContextButton}</Button>
+    </div>
   );
 };
 
